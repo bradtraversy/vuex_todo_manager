@@ -20,7 +20,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 select {
   margin-top: 20px;
   padding: 6px;
