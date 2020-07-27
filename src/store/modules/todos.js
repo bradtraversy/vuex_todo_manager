@@ -21,8 +21,9 @@ const actions = {
       'https://jsonplaceholder.typicode.com/todos',
       { title, completed: false }
     );
-
-    commit('newTodo', response.data);
+    if (title.length>0){
+      commit('newTodo', response.data);
+    }
   },
   async deleteTodo({ commit }, id) {
     await axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`);
